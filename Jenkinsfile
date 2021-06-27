@@ -21,7 +21,6 @@ pipeline {
     stage('Deploy Web app to Azurey'){
       when { changeset "app3/**"} //Will execute your steps if any file change inside the component_a directory
             steps {
-                echo 'Hello World from Bash'
                 sh '''bash example.sh"'''
             }
     }
