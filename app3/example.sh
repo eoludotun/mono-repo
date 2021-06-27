@@ -1,1 +1,1 @@
-echo Example lane for Jenkins changeset entegration. This message written by Bashx
+echo xxxExample lane for Jenkins changeset entegration. This message written by Bashx
