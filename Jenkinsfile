@@ -21,7 +21,8 @@ pipeline {
     stage('Stage for Bash'){
       when { changeset "app3/**"} //Will execute your steps if any file change inside of Bash directory
             steps {
-                sh '''bash example.sh'''
+                sh '''cd app3/
+                bash example.sh'''
             }
     }
   }
