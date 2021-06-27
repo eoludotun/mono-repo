@@ -5,7 +5,7 @@ pipeline {
       when { changeset "app1/**"} //Will execute your steps if any file change inside of Python directory
             steps {
                 echo 'Hello World from Bash'
-                sh '''python3.8 example.sh"'''
+                sh '''python3.8 example.sh'''
             }
     }
 
@@ -21,7 +21,7 @@ pipeline {
     stage('Stage for Bash'){
       when { changeset "app3/**"} //Will execute your steps if any file change inside of Bash directory
             steps {
-                sh '''bash example.sh"'''
+                sh '''bash example.sh'''
             }
     }
   }
