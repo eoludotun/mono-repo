@@ -4,6 +4,7 @@ pipeline {
     stage('Stage for Python'){
       when { changeset "app1/**"} //Will execute your steps if any file change inside of Python directory
             steps {
+                sh "ls"
                 sh '''cd app1/
                       python3.8 example.sh'''
             }
