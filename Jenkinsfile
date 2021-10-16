@@ -1,5 +1,9 @@
 pipeline {
-   agent any
+   //agent any
+       agent {
+        docker { image 'node:14-alpine' }
+    }
+
    stages {
     stage('Stage for Python'){
       when { changeset "app1/**"} //Will execute your steps if any file change inside of Python directory
