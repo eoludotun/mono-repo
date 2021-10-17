@@ -1,16 +1,33 @@
 pipeline {
    agent any
+   
+   
 //        agent {
 //         docker { image 'node:14-alpine' }
 //     }
-//       agent {
-//          docker { image 'python:3.8' }
-//      }
+//     agent {
+//         docker {
+//             image 'node:14-alpine'
+//             args '-p 3000:3000 -p 5000:5000'
+//             args '-u 0:0'
+
+//         }
+//     }
    
    
    stages {
     stage('Stage for Python'){
       when { changeset "app1/**"} //Will execute your steps if any file change inside of Python directory
+       
+               agent { 
+                docker { 
+            
+                    image "python3.10-nodejs16-alpine"
+                }
+            }
+
+       
+       
             steps {
                 sh "ls"
                 sh '''cd app1/
