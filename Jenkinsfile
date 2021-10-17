@@ -4,8 +4,8 @@ pipeline {
 //         docker { image 'node:14-alpine' }
 //     }
       agent {
-//         docker { image 'python:3.8' }
-//     }
+         docker { image 'python:3.8' }
+     }
    
    
    stages {
